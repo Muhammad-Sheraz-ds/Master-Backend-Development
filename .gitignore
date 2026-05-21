@@ -161,7 +161,6 @@ dmypy.json
 cython_debug/
 
 # Editors and IDEs
-.vscode/
 .idea/
 *.suo
 *.ntvs*
@@ -172,3 +171,7 @@ cython_debug/
 # OS files
 .DS_Store
 Thumbs.db
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
