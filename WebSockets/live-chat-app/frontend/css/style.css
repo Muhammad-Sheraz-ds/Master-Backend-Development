@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.join-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.join-card {
+  width: 360px;
+  padding: 28px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.join-card input,
+.message-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.join-card button,
+.message-form button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.join-card button {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.chat-screen {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+
+.sidebar {
+  padding: 20px;
+  background: #111827;
+  color: white;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+}
+
+#users-list {
+  list-style: none;
+  padding: 0;
+}
+
+#users-list li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.chat-header {
+  height: 72px;
+  padding: 0 24px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#connection-status {
+  font-size: 14px;
+  color: #16a34a;
+}
+
+.messages {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.message {
+  max-width: 620px;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.message.system {
+  background: #e0f2fe;
+  color: #075985;
+  text-align: center;
+  max-width: 100%;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #555;
+}
+
+.typing-indicator {
+  height: 24px;
+  padding-left: 24px;
+  color: #666;
+  font-size: 14px;
+}
+
+.message-form {
+  display: flex;
+  gap: 10px;
+  padding: 18px 24px;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+}
+
+@media (max-width: 700px) {
+  .chat-screen {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
