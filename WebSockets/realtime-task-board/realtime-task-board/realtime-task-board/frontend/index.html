@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real-Time Task Board</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section id="login" class="login-card">
+      <h1>Real-Time Task Board</h1>
+      <p>Enter your name to join the live board.</p>
+      <input id="usernameInput" type="text" placeholder="Your name" maxlength="100" />
+      <button id="joinButton">Join Board</button>
+    </section>
+
+    <section id="boardApp" class="hidden">
+      <header class="topbar">
+        <div>
+          <h1>Collaborative Task Board</h1>
+          <p id="connectionStatus">Connecting...</p>
+        </div>
+        <aside>
+          <strong>Online users</strong>
+          <ul id="usersList"></ul>
+        </aside>
+      </header>
+
+      <form id="taskForm" class="task-form">
+        <input id="taskTitleInput" type="text" placeholder="Create a new task" maxlength="255" />
+        <select id="taskColumnInput">
+          <option value="todo">Todo</option>
+          <option value="in_progress">In Progress</option>
+          <option value="done">Done</option>
+        </select>
+        <button type="submit">Create</button>
+      </form>
+
+      <p id="typingIndicator" class="typing-indicator"></p>
+
+      <section class="board">
+        <div class="column" data-column="todo">
+          <h2>Todo</h2>
+          <div id="todo" class="task-list"></div>
+        </div>
+        <div class="column" data-column="in_progress">
+          <h2>In Progress</h2>
+          <div id="in_progress" class="task-list"></div>
+        </div>
+        <div class="column" data-column="done">
+          <h2>Done</h2>
+          <div id="done" class="task-list"></div>
+        </div>
+      </section>
+
+      <section class="activity-panel">
+        <h2>Activity Log</h2>
+        <ul id="activityLog"></ul>
+      </section>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
