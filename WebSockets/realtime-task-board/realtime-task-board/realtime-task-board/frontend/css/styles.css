@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #172033;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+.login-card {
+  max-width: 420px;
+  margin: 100px auto;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+input,
+select,
+button {
+  padding: 12px;
+  border: 1px solid #d6dbe8;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+button {
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.login-card input,
+.login-card button {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.topbar aside {
+  min-width: 220px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+#usersList,
+#activityLog {
+  padding-left: 18px;
+}
+
+.task-form {
+  display: grid;
+  grid-template-columns: 1fr 180px 120px;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.typing-indicator {
+  min-height: 22px;
+  color: #64748b;
+  font-style: italic;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.column {
+  background: #e9edf7;
+  border-radius: 16px;
+  padding: 16px;
+  min-height: 420px;
+}
+
+.column.drag-over {
+  outline: 3px dashed #2563eb;
+}
+
+.task-list {
+  min-height: 320px;
+}
+
+.task-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.07);
+}
+
+.task-card strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.task-card small {
+  color: #64748b;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.task-actions button {
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+.activity-panel {
+  margin-top: 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+@media (max-width: 800px) {
+  .topbar,
+  .board {
+    display: block;
+  }
+
+  .column {
+    margin-bottom: 18px;
+  }
+
+  .task-form {
+    grid-template-columns: 1fr;
+  }
+}
