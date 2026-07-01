@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Chat App</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="app">
+    <section id="join-screen" class="join-screen">
+      <div class="join-card">
+        <h1>Live Chat</h1>
+        <p>Enter your name to join the chat room.</p>
+        <input id="username-input" type="text" placeholder="Your name" maxlength="20" />
+        <button id="join-button">Join Chat</button>
+      </div>
+    </section>
+
+    <section id="chat-screen" class="chat-screen hidden">
+      <aside class="sidebar">
+        <h2>Online Users</h2>
+        <ul id="users-list"></ul>
+      </aside>
+
+      <section class="chat-panel">
+        <header class="chat-header">
+          <h1>Live Chat Room</h1>
+          <span id="connection-status">Disconnected</span>
+        </header>
+
+        <div id="messages" class="messages"></div>
+        <div id="typing-indicator" class="typing-indicator"></div>
+
+        <form id="message-form" class="message-form">
+          <input id="message-input" type="text" placeholder="Type your message..." autocomplete="off" />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
